@@ -2064,7 +2064,7 @@ class ChromeNsp(Pfs0):
             size2 = 0
             size3 = 0
             if type(nca) == Nca:
-                if str(nca.header.contentType) == "Content.META":
+                if nca.header.contentType == 1:
                     for f in nca:
                         for cnmt in f:
                             nca.rewind()
