@@ -2,3 +2,4 @@ ztools/web/_debug_/
 ztools/web/_cache_/
 squirrel.log
 squirrel.pid
+**/__pycache__/
