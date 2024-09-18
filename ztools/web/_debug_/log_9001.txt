@@ -1,0 +1,328 @@
+NSC_Builder by JulesOnTheRoad
+Server launched in http://serverdomain:9001/nscb.html
+Local Interface in http://serverdomain:9001/main.html
+Exception: [Errno 2] No such file or directory: '/NSCbuilder/zconfig/remote_libraries.txt'
+* Seeking icon
+Exception: a bytes-like object is required, not 'NoneType'
+* Retrieving Game Information
+Found NCA: 27789456bac6a06a2aa06da3ed9d6085.nca, contentType: 5
+Found NCA: 8c2f398113b5db0b865740512ffa188d.cnmt.nca, contentType: 1
+Starting getDBdict for cnmtname: 8c2f398113b5db0b865740512ffa188d.cnmt.nca
+Starting get_data_from_cnmt for cnmtname: 8c2f398113b5db0b865740512ffa188d.cnmt.nca
+Processing NCA: <Fs.Nca.Nca object at 0x7f39597dbc50>
+NCA is of type Nca, checking contentType: 5
+Processing NCA: <Fs.File.File object at 0x7f39597dab10>
+Processing NCA: <Fs.Nca.Nca object at 0x7f39597a9970>
+NCA is of type Nca, checking contentType: 1
+NCA contentType is 'Content.META'. Path: 8c2f398113b5db0b865740512ffa188d.cnmt.nca
+Path matches cnmtname, proceeding with extraction.
+crypto1: 0, crypto2: 0
+Determined keygeneration: 0
+Found CNMT in NCA, processing...
+titleid: 01002DE00C251002, titleid2: 01002de00c251002
+titleversion: 0
+type_n: b'\x82'
+offset: 16, content_entries: 1, meta_entries: 0
+base_ID: 01002DE00C250000
+min_sversion: 0, length_of_emeta: 0
+content_type_cnmt: AddOnContent
+RSV: (1.0.0), RGV: 0
+ctype: DLC
+metasdkversion: 0.12.17.0, exesdkversion: 
+ncadata: [{'NcaId': '27789456bac6a06a2aa06da3ed9d6085', 'NCAtype': 'Data', 'Size': '101376', 'Hash': '27789456bac6a06a2aa06da3ed9d6085bc557b636f7d32751c9ceedb5f9cb4f3'}]
+cnmtdata: {'NcaId': '8c2f398113b5db0b865740512ffa188d', 'NCAtype': 'Meta', 'Size': '19968', 'Hash': '8c2f398113b5db0b865740512ffa188dabe8317a98f9adb10e0680242ad49fdd'}
+rightsId: 01002DE00C2510020000000000000000
+Extracted data from cnmt: titleid=01002DE00C251002, ctype=DLC, InstalledSize=121344
+DB_get_names failed, trying DB_get_names_from_nutdb: cannot unpack non-iterable NoneType object
+Retrieved names from nutdb: sqname=Children of Morta [Children of Morta: Ancient Spirits], sqeditor=11 bit studios
+Title keys retrieved: titlekey=00000000000000000000000000000000, dectkey=8E92057499A97DD72E009B9A72FC4093
+Content data retrieved: nsuId=70010000013871, worldreleasedate=20/11/2019, genretags=['Action', 'RPG']
+getDBdict completed successfully
+* Generating Titles File Data
+-----------------------------------
+FILES NOT LINKED TO CONTENT IN NSP
+-----------------------------------
+27789456bac6a06a2aa06da3ed9d6085.nca			Size: 99.0KB
+01002de00c2510020000000000000000.cert			Size: 1.75KB
+8c2f398113b5db0b865740512ffa188d.cnmt.nca			Size: 19.5KB
+01002de00c2510020000000000000000.tik			Size: 704B
+							  --------------------
+							  TOTAL SIZE: 120.94KB
+* Reading Data from Nacp
+* Reading Data from Npdm
+* Reading Data from Cnmt
+* Verifying files
+***************
+DECRYPTION TEST
+***************
+01002DE00C251002 - 5
+	27789456bac6a06a2aa06da3ed9d6085.nca	  -> is CORRECT
+01002DE00C251002 - 1
+	8c2f398113b5db0b865740512ffa188d.cnmt.nca -> is CORRECT
+Content.TICKET
+	01002de00c2510020000000000000000.tik	  -> titlekey is INCORRECT <<<-
+
+VERDICT: NSP FILE IS CORRUPT OR MISSES FILES
+
+****************
+SIGNATURE 1 TEST
+****************
+01002DE00C251002 - 5
+    > 27789456bac6a06a2aa06da3ed9d6085.nca	  -> was MODIFIED
+	* NOT VERIFIABLE!!!
+
+01002DE00C251002 - 1
+    > 8c2f398113b5db0b865740512ffa188d.cnmt.nca   -> needs RSV check
+	* CHECKING INTERNAL HASHES
+	    - PFS0 hash is CORRECT
+	    - HASH TABLE hash is CORRECT
+	    - HEADER BLOCK hash is CORRECT
+	* INTERNAL HASHES MATCH
+  0%|          | 0.00/37.0 [00:00<?, ?RSV/s]  3%|▎         | 1.00/37.0 [00:00<00:07, 4.83RSV/s]  5%|▌         | 2.00/37.0 [00:00<00:07, 4.90RSV/s]  8%|▊         | 3.00/37.0 [00:00<00:06, 4.88RSV/s] 11%|█         | 4.00/37.0 [00:00<00:07, 4.69RSV/s] 14%|█▎        | 5.00/37.0 [00:01<00:06, 4.75RSV/s] 16%|█▌        | 6.00/37.0 [00:01<00:06, 4.82RSV/s] 19%|█▉        | 7.00/37.0 [00:01<00:06, 4.79RSV/s] 22%|██▏       | 8.00/37.0 [00:01<00:05, 4.84RSV/s] 24%|██▍       | 9.00/37.0 [00:01<00:05, 4.88RSV/s] 27%|██▋       | 10.0/37.0 [00:02<00:05, 4.88RSV/s] 30%|██▉       | 11.0/37.0 [00:02<00:05, 4.88RSV/s] 32%|███▏      | 12.0/37.0 [00:02<00:05, 4.89RSV/s] 35%|███▌      | 13.0/37.0 [00:02<00:04, 4.91RSV/s] 38%|███▊      | 14.0/37.0 [00:02<00:04, 4.91RSV/s] 41%|████      | 15.0/37.0 [00:03<00:04, 4.89RSV/s] 43%|████▎     | 16.0/37.0 [00:03<00:04, 4.91RSV/s] 46%|████▌     | 17.0/37.0 [00:03<00:04, 4.91RSV/s] 49%|████▊     | 18.0/37.0 [00:03<00:03, 4.87RSV/s] 51%|█████▏    | 19.0/37.0 [00:03<00:03, 4.87RSV/s] 54%|█████▍    | 20.0/37.0 [00:04<00:03, 4.85RSV/s] 57%|█████▋    | 21.0/37.0 [00:04<00:03, 4.87RSV/s] 59%|█████▉    | 22.0/37.0 [00:04<00:03, 4.85RSV/s] 62%|██████▏   | 23.0/37.0 [00:04<00:02, 4.82RSV/s] 65%|██████▍   | 24.0/37.0 [00:04<00:02, 4.85RSV/s] 68%|██████▊   | 25.0/37.0 [00:05<00:02, 4.82RSV/s] 70%|███████   | 26.0/37.0 [00:05<00:02, 4.82RSV/s] 73%|███████▎  | 27.0/37.0 [00:05<00:02, 4.84RSV/s] 76%|███████▌  | 28.0/37.0 [00:05<00:01, 4.85RSV/s] 78%|███████▊  | 29.0/37.0 [00:05<00:01, 4.85RSV/s] 81%|████████  | 30.0/37.0 [00:06<00:01, 4.83RSV/s] 84%|████████▍ | 31.0/37.0 [00:06<00:01, 4.86RSV/s] 86%|████████▋ | 32.0/37.0 [00:06<00:01, 4.89RSV/s] 89%|████████▉ | 33.0/37.0 [00:06<00:00, 4.86RSV/s] 92%|█████████▏| 34.0/37.0 [00:07<00:00, 4.84RSV/s] 95%|█████████▍| 35.0/37.0 [00:07<00:00, 4.87RSV/s] 97%|█████████▋| 36.0/37.0 [00:07<00:00, 4.85RSV/s]100%|██████████| 37.0/37.0 [00:07<00:00, 4.89RSV/s]VERDICT: NSP FILE COULD'VE BEEN TAMPERED WITH
+                                                   * Generating BaseID FileTree from DB
+* Seeking cheats from DB
+  DONE
+* Seeking icon
+Exception: a bytes-like object is required, not 'NoneType'
+* Retrieving Game Information
+Found NCA: a0e952b1061056437b4c43e73261a1a2.cnmt.nca, contentType: 1
+Found NCA: e0cc3cad809984d60338315a145e7f5a.nca, contentType: 5
+Starting getDBdict for cnmtname: a0e952b1061056437b4c43e73261a1a2.cnmt.nca
+Starting get_data_from_cnmt for cnmtname: a0e952b1061056437b4c43e73261a1a2.cnmt.nca
+Processing NCA: <Fs.File.File object at 0x7f39533a5970>
+Processing NCA: <Fs.Ticket.Ticket object at 0x7f39533a42f0>
+Processing NCA: <Fs.Nca.Nca object at 0x7f39533a4830>
+NCA is of type Nca, checking contentType: 1
+NCA contentType is 'Content.META'. Path: a0e952b1061056437b4c43e73261a1a2.cnmt.nca
+Path matches cnmtname, proceeding with extraction.
+crypto1: 2, crypto2: 11
+Determined keygeneration: 11
+Found CNMT in NCA, processing...
+titleid: 01002DE00C251001, titleid2: 01002de00c251001
+titleversion: 0
+type_n: b'\x82'
+offset: 16, content_entries: 1, meta_entries: 0
+base_ID: 01002DE00C250000
+min_sversion: 393216, length_of_emeta: 0
+content_type_cnmt: AddOnContent
+RSV: (9.2.0), RGV: 393216
+ctype: DLC
+metasdkversion: 10.4.0.0, exesdkversion: 
+ncadata: [{'NcaId': 'e0cc3cad809984d60338315a145e7f5a', 'NCAtype': 'Data', 'Size': '4210688', 'Hash': 'e0cc3cad809984d60338315a145e7f5aa43146066f75ef3f1429b31009016cfe'}]
+cnmtdata: {'NcaId': 'a0e952b1061056437b4c43e73261a1a2', 'NCAtype': 'Meta', 'Size': '3584', 'Hash': 'a0e952b1061056437b4c43e73261a1a2f99cce7e650be0c7be4326a944d041a3'}
+rightsId: 01002DE00C25100100000000000000011
+Extracted data from cnmt: titleid=01002DE00C251001, ctype=DLC, InstalledSize=4214272
+DB_get_names failed, trying DB_get_names_from_nutdb: cannot unpack non-iterable NoneType object
+Retrieved names from nutdb: sqname=Children of Morta [Children of Morta: Paws and Claws], sqeditor=11 bit studios
+Title keys retrieved: titlekey=False, dectkey=False
+Content data retrieved: nsuId=70010000013871, worldreleasedate=20/11/2019, genretags=['Action', 'RPG']
+getDBdict completed successfully
+* Generating Titles File Data
+-----------------------------------
+FILES NOT LINKED TO CONTENT IN NSP
+-----------------------------------
+01002de00c251001000000000000000b.cert			Size: 1.75KB
+01002de00c251001000000000000000b.tik			Size: 704B
+a0e952b1061056437b4c43e73261a1a2.cnmt.nca			Size: 3.5KB
+a0e952b1061056437b4c43e73261a1a2.cnmt.xml			Size: 910B
+e0cc3cad809984d60338315a145e7f5a.nca			Size: 4.02MB
+							  --------------------
+							  TOTAL SIZE: 4.02MB
+* Reading Data from Nacp
+* Reading Data from Npdm
+* Reading Data from Cnmt
+* Verifying files
+***************
+DECRYPTION TEST
+***************
+01002DE00C251001 - 1
+	a0e952b1061056437b4c43e73261a1a2.cnmt.nca -> is CORRECT
+01002DE00C251001 - 5
+	e0cc3cad809984d60338315a145e7f5a.nca	  -> is CORRECT
+Content.TICKET
+	01002de00c251001000000000000000b.tik	  -> is CORRECT
+
+VERDICT: NSP FILE IS CORRECT
+
+****************
+SIGNATURE 1 TEST
+****************
+01002DE00C251001 - 5
+    > e0cc3cad809984d60338315a145e7f5a.nca	  -> is PROPER
+
+01002DE00C251001 - 1
+    > a0e952b1061056437b4c43e73261a1a2.cnmt.nca   -> is PROPER
+
+VERDICT: NSP  FILE IS SAFE
+* Generating BaseID FileTree from DB
+* Seeking cheats from DB
+  DONE
+* Seeking icon
+Exception: a bytes-like object is required, not 'NoneType'
+* Retrieving Game Information
+Found NCA: 8043efc2304eb03e779be11522c83eec.nca, contentType: 0
+Found NCA: fa3eee3043a7248800cc6477e833e317.nca, contentType: 3
+Found NCA: 95226a38b8287900a8dd68986cac2377.cnmt.nca, contentType: 1
+Found NCA: 61dae143b749e9f73a671b1343254eef.nca, contentType: 2
+Starting getDBdict for cnmtname: 95226a38b8287900a8dd68986cac2377.cnmt.nca
+Starting get_data_from_cnmt for cnmtname: 95226a38b8287900a8dd68986cac2377.cnmt.nca
+Processing NCA: <Fs.File.File object at 0x7f395980b740>
+Processing NCA: <Fs.Ticket.Ticket object at 0x7f395980a750>
+Processing NCA: <Fs.Nca.Nca object at 0x7f395980a570>
+NCA is of type Nca, checking contentType: 0
+Processing NCA: <Fs.Nca.Nca object at 0x7f395980a0f0>
+NCA is of type Nca, checking contentType: 3
+Processing NCA: <Fs.Nca.Nca object at 0x7f395980b5f0>
+NCA is of type Nca, checking contentType: 1
+NCA contentType is 'Content.META'. Path: 95226a38b8287900a8dd68986cac2377.cnmt.nca
+Path matches cnmtname, proceeding with extraction.
+crypto1: 2, crypto2: 11
+Determined keygeneration: 11
+Found CNMT in NCA, processing...
+titleid: 01008DD013200000, titleid2: 01008dd013200000
+titleversion: 0
+type_n: b'\x80'
+offset: 16, content_entries: 3, meta_entries: 0
+base_ID: 01008DD013200800
+min_sversion: 672137216, length_of_emeta: 0
+content_type_cnmt: Application
+RSV: (10.1.0), RGV: 0
+ctype: GAME
+metasdkversion: 10.4.0.0, exesdkversion: 
+ncadata: [{'NcaId': '8043efc2304eb03e779be11522c83eec', 'NCAtype': 'Program', 'Size': '3107880960', 'Hash': '8043efc2304eb03e779be11522c83eecb546673645f5f9bcaf2c76beffd71a18'}, {'NcaId': '61dae143b749e9f73a671b1343254eef', 'NCAtype': 'Control', 'Size': '1550336', 'Hash': '61dae143b749e9f73a671b1343254eef459bb73a5ca10dfda2622e39b43c8b77'}, {'NcaId': 'fa3eee3043a7248800cc6477e833e317', 'NCAtype': 'LegalInformation', 'Size': '167936', 'Hash': 'fa3eee3043a7248800cc6477e833e3175e853cee9158c2c91d2dd5410adc4304'}]
+cnmtdata: {'NcaId': '95226a38b8287900a8dd68986cac2377', 'NCAtype': 'Meta', 'Size': '3584', 'Hash': '95226a38b8287900a8dd68986cac2377c707278c7609c1848e3a3c00a9d88ee2'}
+rightsId: 01008DD01320000000000000000000011
+Extracted data from cnmt: titleid=01008DD013200000, ctype=GAME, InstalledSize=3109602816
+DB_get_names failed, trying DB_get_names_from_nutdb: cannot unpack non-iterable NoneType object
+Retrieved names from nutdb: sqname=Ori and the Will of the Wisps, sqeditor=False
+NACP data retrieved: None
+Title keys retrieved: titlekey=False, dectkey=False
+Error processing NACP data: 'NoneType' object is not subscriptable
+Content data retrieved: nsuId=70010000034725, worldreleasedate=17/09/2020, genretags=['Action', 'Adventure', 'Platformer']
+getDBdict completed successfully
+* Generating Titles File Data
+-----------------------------------
+FILES NOT LINKED TO CONTENT IN NSP
+-----------------------------------
+01008dd013200000000000000000000b.cert			Size: 1.75KB
+01008dd013200000000000000000000b.tik			Size: 704B
+8043efc2304eb03e779be11522c83eec.nca			Size: 2.89GB
+fa3eee3043a7248800cc6477e833e317.nca			Size: 164.0KB
+95226a38b8287900a8dd68986cac2377.cnmt.nca			Size: 3.5KB
+61dae143b749e9f73a671b1343254eef.nca			Size: 1.48MB
+							  --------------------
+							  TOTAL SIZE: 2.9GB
+* Reading Data from Nacp
+* Reading Data from Npdm
+* Reading Data from Cnmt
+* Verifying files
+***************
+DECRYPTION TEST
+***************
+01008DD013200000 - 0
+	8043efc2304eb03e779be11522c83eec.nca	  -> is CORRECT
+01008DD013200000 - 3
+	fa3eee3043a7248800cc6477e833e317.nca	  -> is CORRECT
+01008DD013200000 - 1
+	95226a38b8287900a8dd68986cac2377.cnmt.nca -> is CORRECT
+01008DD013200000 - 2
+	61dae143b749e9f73a671b1343254eef.nca	  -> is CORRECT
+Content.TICKET
+	01008dd013200000000000000000000b.tik	  -> is CORRECT
+
+VERDICT: NSP FILE IS CORRECT
+
+****************
+SIGNATURE 1 TEST
+****************
+01008DD013200000 - 0
+    > 8043efc2304eb03e779be11522c83eec.nca	  -> is PROPER
+
+01008DD013200000 - 3
+    > fa3eee3043a7248800cc6477e833e317.nca	  -> is PROPER
+
+01008DD013200000 - 2
+    > 61dae143b749e9f73a671b1343254eef.nca	  -> is PROPER
+
+01008DD013200000 - 1
+    > 95226a38b8287900a8dd68986cac2377.cnmt.nca   -> is PROPER
+
+VERDICT: NSP  FILE IS SAFE
+* Generating BaseID FileTree from DB
+* Seeking cheats from DB
+  DONE
+* Seeking icon
+Exception: a bytes-like object is required, not 'NoneType'
+* Retrieving Game Information
+Found NCA: 3ea4c9eaad633848cd2e96f177368ed0.cnmt.nca, contentType: 1
+Found NCA: bf9b077f274e72032b4e10ff372f9b0f.nca, contentType: 5
+Starting getDBdict for cnmtname: 3ea4c9eaad633848cd2e96f177368ed0.cnmt.nca
+Starting get_data_from_cnmt for cnmtname: 3ea4c9eaad633848cd2e96f177368ed0.cnmt.nca
+Processing NCA: <Fs.File.File object at 0x7f39597db020>
+Processing NCA: <Fs.Ticket.Ticket object at 0x7f39597da780>
+Processing NCA: <Fs.Nca.Nca object at 0x7f39597db3e0>
+NCA is of type Nca, checking contentType: 1
+NCA contentType is 'Content.META'. Path: 3ea4c9eaad633848cd2e96f177368ed0.cnmt.nca
+Path matches cnmtname, proceeding with extraction.
+crypto1: 2, crypto2: 17
+Determined keygeneration: 17
+Found CNMT in NCA, processing...
+titleid: 0100210019429002, titleid2: 0100210019429002
+titleversion: 0
+type_n: b'\x82'
+offset: 24, content_entries: 1, meta_entries: 0
+base_ID: 0100210019428000
+min_sversion: 0, length_of_emeta: 0
+content_type_cnmt: AddOnContent
+RSV: (1.0.0), RGV: 0
+ctype: DLC
+metasdkversion: 17.5.0.0, exesdkversion: 
+ncadata: [{'NcaId': 'bf9b077f274e72032b4e10ff372f9b0f', 'NCAtype': 'Data', 'Size': '114688', 'Hash': 'bf9b077f274e72032b4e10ff372f9b0f8ce9dde3b02c5976f857a2e5dc60cb57'}]
+cnmtdata: {'NcaId': '3ea4c9eaad633848cd2e96f177368ed0', 'NCAtype': 'Meta', 'Size': '3584', 'Hash': '3ea4c9eaad633848cd2e96f177368ed03ffb3cc073d4f5adb984c124eb0c3551'}
+rightsId: 010021001942900200000000000000017
+Extracted data from cnmt: titleid=0100210019429002, ctype=DLC, InstalledSize=118272
+DB_get_names failed, trying DB_get_names_from_nutdb: cannot unpack non-iterable NoneType object
+Retrieved names from nutdb: sqname=False, sqeditor=False
+Title keys retrieved: titlekey=False, dectkey=False
+Content data retrieved: nsuId=70010000057921, worldreleasedate=18/01/2024, genretags=['Action', 'Adventure']
+getDBdict completed successfully
+* Generating Titles File Data
+-----------------------------------
+FILES NOT LINKED TO CONTENT IN NSP
+-----------------------------------
+01002100194290020000000000000011.cert			Size: 1.75KB
+01002100194290020000000000000011.tik			Size: 704B
+3ea4c9eaad633848cd2e96f177368ed0.cnmt.nca			Size: 3.5KB
+3ea4c9eaad633848cd2e96f177368ed0.cnmt.xml			Size: 911B
+bf9b077f274e72032b4e10ff372f9b0f.nca			Size: 112.0KB
+							  --------------------
+							  TOTAL SIZE: 118.83KB
+* Reading Data from Nacp
+* Reading Data from Npdm
+* Reading Data from Cnmt
+* Verifying files
+***************
+DECRYPTION TEST
+***************
+0100210019429002 - 1
+	3ea4c9eaad633848cd2e96f177368ed0.cnmt.nca -> is CORRECT
+0100210019429002 - 5
+	bf9b077f274e72032b4e10ff372f9b0f.nca	  -> is CORRECT
+Content.TICKET
+	01002100194290020000000000000011.tik	  -> is CORRECT
+
+VERDICT: NSP FILE IS CORRECT
+
+****************
+SIGNATURE 1 TEST
+****************
+0100210019429002 - 5
+    > bf9b077f274e72032b4e10ff372f9b0f.nca	  -> is PROPER
+
+0100210019429002 - 1
+    > 3ea4c9eaad633848cd2e96f177368ed0.cnmt.nca   -> is PROPER
+
+VERDICT: NSP  FILE IS SAFE
+* Generating BaseID FileTree from DB
+* Seeking cheats from DB
+  DONE
