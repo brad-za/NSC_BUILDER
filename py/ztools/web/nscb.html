@@ -294,6 +294,25 @@
 <script src="js/metro.min.js"></script>
 <script src="js/hls.js"></script>
 <script>
+
+document.addEventListener("DOMContentLoaded", function() {
+		async function run() {
+		try {
+			let result = await eel.backend_test_function();
+			console.log("Raw result:", result);
+			console.log("Type of result:", typeof result);
+			// Rest of your code...
+		} catch (error) {
+			console.error("Error:", error);
+		}
+	}
+    
+
+    run();  // Call the run function
+});
+
+
+
 navclicks=0;
 sideclicks=0;
 H=screen.height;W=screen.width;
@@ -865,6 +884,8 @@ function get_local_libraries(){
 	eel.get_libraries()(set_local_libraries)
 	show_local_libraries()
 	var selected = document.getElementById("_local_lib_select_").value
+	console.log(document.getElementById("_local_lib_select_"))
+	console.log("selected :", selected)
 	set_local_lib_cache(selected)
 }
 

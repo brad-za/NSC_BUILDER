@@ -2064,7 +2064,7 @@ class ChromeNsp(Pfs0):
             size2 = 0
             size3 = 0
             if type(nca) == Nca:
-                if nca.header.contentType == 1:
+                if nca.header.contentType.name == "META":
                     for f in nca:
                         for cnmt in f:
                             nca.rewind()
@@ -2453,7 +2453,7 @@ class ChromeNsp(Pfs0):
                 if filename == nca_name:
                     size = nca.header.size
                     size_pr = sq_tools.getSize(size)
-                    content = str(nca.header.contentType)
+                    content = nca.header.contentType.name
                     content = content[8:] + ": "
                     ncatype = sq_tools.getTypeFromCNMT(ncatype)
                     if ncatype != "Meta: ":
@@ -3833,7 +3833,7 @@ class ChromeNsp(Pfs0):
                     textpath = os.path.join(outfolder, text_file)
                     with open(textpath, "a") as tfile:
                         tfile.write(
-                            str(nca.header.contentType)
+                            nca.header.contentType.name
                             + ": "
                             + tabs
                             + str(nca._path)
@@ -3985,7 +3985,7 @@ class ChromeNsp(Pfs0):
                         textpath = os.path.join(outfolder, text_file)
                         with open(textpath, "a") as tfile:
                             tfile.write(
-                                str(nca.header.contentType)
+                                nca.header.contentType.name
                                 + ": "
                                 + tabs
                                 + str(nca._path)
@@ -10443,7 +10443,7 @@ class ChromeNsp(Pfs0):
         cnmtnames = list()
         for nca in self:
             if type(nca) == Nca:
-                if nca.header.contentType == 1:
+                if nca.header.contentType.name == "META":
                     cnmtnames.append(str(nca._path))
         for file in cnmtnames:
             DBdict = self.getDBdict(file, trans)
@@ -10458,7 +10458,7 @@ class ChromeNsp(Pfs0):
         cnmtnames = list()
         for nca in self:
             if type(nca) == Nca:
-                if nca.header.contentType == 1:
+                if nca.header.contentType.name == "META":
                     cnmtnames.append(str(nca._path))
         content_number = len(cnmtnames)
         if content_number > 1:
@@ -10730,7 +10730,7 @@ class ChromeNsp(Pfs0):
     def get_data_from_cnmt(self, cnmtname):
         for nca in self:
             if type(nca) == Nca:
-                if nca.header.contentType == 1:
+                if nca.header.contentType.name == "META":
                     if str(nca._path) == cnmtname:
                         crypto1 = nca.header.getCryptoType()
                         crypto2 = nca.header.getCryptoType2()

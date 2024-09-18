@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<title>NSC Builder by JulesOnTheRoad</title>
+	<title>NSCbuilder : Linux</title>
 	<link rel="icon" type="image/vnd.microsoft.icon" href="img/squirrelv2.ico" sizes="16x16 24x24 36x36 48x48">
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -16,7 +16,7 @@
 		}
 	</style>
     <script type="text/javascript" src="/eel.js"></script>
-    <script type="text/javascript" src="https://raw.githubusercontent.com/eligrey/FileSaver.js/master/src/FileSaver.js"></script>	
+    <!-- <script type="text/javascript" src="https://raw.githubusercontent.com/eligrey/FileSaver.js/master/src/FileSaver.js"></script>	 -->
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/underscore@1.11.0/underscore-min.js"></script> 
 	
 	<script>
@@ -24,6 +24,7 @@
 		eel.get_libraries()(set_local_libraries)
 		eel.get_drive_libraries()(set_remote_libraries)
 		});
+		
 	</script>
 </head>
 <body  class="bg-lightGray fg-white h-vh-100 m4-cloak">
@@ -297,6 +298,18 @@
 <script src="js/metro.min.js"></script>
 <script src="js/hls.js"></script>
 <script>
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+	eel.backend_test_function()((result) => {
+    console.log("Raw result:", result);
+    console.log("Type of result:", typeof result);
+});
+});
+
+
+
 navclicks=0;
 sideclicks=0;
 H=screen.height;W=screen.width;
@@ -554,10 +567,11 @@ function setInfo(data) {
 }
 
 function set_filetree(data) {
-	document.getElementById("gametree").innerHTML = data;
-	document.getElementById("_gtree_bar_but").setAttribute("class", "enabled");
-	document.getElementById("_gtree_bar_but1").setAttribute("class", "mif-tree fg-black");
-	document.getElementById("_gtree_bar_but2").setAttribute("class", "caption fg-black");
+    console.log('Received game tree data:', data); // Add this line
+    document.getElementById("gametree").innerHTML = data;
+    document.getElementById("_gtree_bar_but").setAttribute("class", "enabled");
+    document.getElementById("_gtree_bar_but1").setAttribute("class", "mif-tree fg-black");
+    document.getElementById("_gtree_bar_but2").setAttribute("class", "caption fg-black");
 }
 
 function set_cheats(data) {
