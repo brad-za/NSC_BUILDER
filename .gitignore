@@ -3,3 +3,4 @@ ztools/web/_cache_/
 squirrel.log
 squirrel.pid
 **/__pycache__/
+zconfig/DB
