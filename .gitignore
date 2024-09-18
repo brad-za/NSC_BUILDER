@@ -83,3 +83,5 @@ py/ztools/dev_keys.txt
 *.rar
 py/ztools/lib/Install_server.py
 py/ztools/lib/plaintext.py
+py/squirrel.log
+py/squirrel.pid
